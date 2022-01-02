@@ -3,7 +3,7 @@ type bytesT = (int, int, int, int, int, int, int, int, int, int, int, int, int, 
 
 @scope("uuid") @val external _NIL: string = "NIL"
 
-@module("uuid") external parse: unit => bytesT = "parse"
+@module("uuid") external parse: string => bytesT = "parse"
 @module("uuid") external stringify: bytesT => string = "stringify"
 @module("uuid") external validate: string => bool = "validate"
 @module("uuid") external version: string => int = "version"
@@ -20,10 +20,10 @@ module V1 = {
   }
 
   @module("uuid") external make: unit => string = "v1"
-  @module("uuid") external makeWithOptions: (~options: v1Options) => string = "v1"
+  @module("uuid") external makeWithOptions: (~options: options) => string = "v1"
   @module("uuid")
   external makeWithBuffer: (
-    ~options: v1Options,
+    ~options: options,
     ~buffer: array<int>,
     ~offset: int=?,
     unit,
@@ -31,8 +31,8 @@ module V1 = {
 }
 
 module V3 = {
-  @module("uuid") @scope("v3") @val external _v3DNS: string = "DNS"
-  @module("uuid") @scope("v3") @val external _v3URL: string = "URL"
+  @module("uuid") @scope("v3") @val external _DNS: string = "DNS"
+  @module("uuid") @scope("v3") @val external _URL: string = "URL"
 
   @module("uuid")
   external make: (~name: string, ~namespace: @unwrap [#Uuid(string) | #Bytes(bytesT)]) => string =
@@ -55,18 +55,18 @@ module V4 = {
   }
 
   @module("uuid") external make: unit => string = "v4"
-  @module("uuid") external makeWithOptions: (~options: v4Options) => string = "v4"
+  @module("uuid") external makeWithOptions: (~options: options) => string = "v4"
   @module("uuid")
   external makeWithBuffer: (
-    ~options: v4Options=?,
+    ~options: options=?,
     ~buffer: array<int>,
     ~offset: int=?,
     unit,
   ) => string = "v4"
 }
 module V5 = {
-  @module("uuid") @scope("v5") @val external _v5DNS: string = "DNS"
-  @module("uuid") @scope("v5") @val external _v5URL: string = "URL"
+  @module("uuid") @scope("v5") @val external _DNS: string = "DNS"
+  @module("uuid") @scope("v5") @val external _URL: string = "URL"
 
   @module("uuid")
   external make: (~name: string, ~namespace: @unwrap [#Uuid(string) | #Bytes(bytesT)]) => string =

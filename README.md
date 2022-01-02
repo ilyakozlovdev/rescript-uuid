@@ -1,51 +1,39 @@
-# bs-uuid
+# rescript-uuid
 
-Bucklescript/Reason bindings for [uuid](https://www.npmjs.com/package/uuid)
+Rescript bindings for [uuid](https://www.npmjs.com/package/uuid)
 
 
 # Install
 ```
-yarn add bs-uuid
+yarn add uuid
+yarn add -D rescript-uuid
 ```
 Add it to your bsconfig.json
 ```
 "bs-dependencies": [
     ...
-    "bs-uuid"
+    "rescript-uuid"
 ],
 ```
 
 # Example
 
 ```
-open BsUuid;
-
-let v1 = Uuid.V1.create();
+let v1 = Uuid.V1.make();
 let v1WithOptions = Uuid.V1.createWithOptions(
     Uuid.V1.options(~msecs=1, ())
 );
 
-let v3 = Uuid.V3.create(
+let v3 = Uuid.V3.make(
     ~name="Test", 
-    ~namespace=`Uuid(Uuid.V3._DNS)
+    ~namespace=#Uuid(Uuid.V3._DNS)
 );
 
-let v4 = Uuid.V4.create();
+let v4 = Uuid.V4.make();
 
-let v5 = Uuid.V5.create(
+let v5 = Uuid.V5.make(
     ~name="Test", 
-    ~namespace=`Uuid(Uuid.V5._DNS)
+    ~namespace=#Uuid(Uuid.V5._DNS)
 );
 
-```
-
-# Build
-```
-yarn run build
-```
-
-# Build + Watch
-
-```
-yarn run start
 ```

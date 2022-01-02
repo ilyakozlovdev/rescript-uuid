@@ -1,25 +1,25 @@
 {
-  "name": "bs-uuid",
-  "version": "0.3.1",
+  "name": "rescript-uuid",
+  "version": "8.3.2-alpha",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
+    "build": "rescript",
+    "start": "rescript build -w",
+    "clean": "rescript clean",
     "test": "jest"
   },
   "keywords": [
-    "BuckleScript"
+    "Rescript"
   ],
-  "author": "jrdrg",
+  "author": "ilyakozlovdev",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jrdrg/bs-uuid.git"
+    "url": "git@github.com:ilyakozlovdev/rescript-uuid.git"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.2",
-    "bs-platform": "^3.0.0",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "rescript": "^9.1.4"
   },
   "dependencies": {
     "uuid": "^3.2.1"

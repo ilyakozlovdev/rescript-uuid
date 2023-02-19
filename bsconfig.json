@@ -1,12 +1,12 @@
 {
   "name": "rescript-uuid",
-  "version": "8.3.2-alpha",
+  "version": "9.0.0",
   "namespace": false,
   "sources": [{
     "dir" : "src",
     "subdirs" : true
   }, {
-    "dir": "__tests__",
+    "dir": "tests",
     "type": "dev"
   },
   {
@@ -17,9 +17,9 @@
     "module": "es6",
     "in-source": true
   },
-  "suffix": ".bs.js",
+  "suffix": ".mjs",
   "bs-dev-dependencies": [
-    "@glennsl/bs-jest"
+    "rescript-vitest"
   ],
   "warnings": {
     "error" : "+101"

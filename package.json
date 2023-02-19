@@ -1,11 +1,11 @@
 {
   "name": "rescript-uuid",
-  "version": "8.3.2-alpha",
+  "version": "9.0.0-rc",
+  "type": "module",
   "scripts": {
-    "build": "rescript",
-    "start": "rescript build -w",
-    "clean": "rescript clean",
-    "test": "jest"
+    "build": "vite build",
+    "dev": "vite",
+    "clean": "rescript clean"
   },
   "keywords": [
     "Rescript"
@@ -17,11 +17,10 @@
     "url": "git@github.com:ilyakozlovdev/rescript-uuid.git"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.2",
-    "jest": "^22.4.3",
-    "rescript": "^9.1.4"
+    "@glennsl/bs-jest": "^0.7.0",
+    "rescript": "^10.1.2"
   },
   "dependencies": {
-    "uuid": "^3.2.1"
+    "uuid": "^9.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "rescript-uuid",
-  "version": "9.0.0-rc",
+  "version": "9.0.1",
   "type": "module",
   "scripts": {
     "build": "vite build",
@@ -17,10 +17,9 @@
     "url": "git@github.com:ilyakozlovdev/rescript-uuid.git"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.7.0",
-    "rescript": "^10.1.2"
+    "rescript": "^10.1.4"
   },
   "dependencies": {
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   }
 }
